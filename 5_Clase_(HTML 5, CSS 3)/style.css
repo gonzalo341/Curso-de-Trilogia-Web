@@ -1,0 +1,108 @@
+body {
+    background-color: rgba(15, 15, 95, 25%);
+}
+
+header {
+    box-sizing: content-box;
+    background-color: rgb(15, 15, 95);
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+main {
+    margin: 5px;
+}
+
+section {
+    box-sizing: border-box;
+    background-color: #e6ca97;
+    width: 90%;
+    border: 2px solid #444;
+    border-radius: 8px;
+    text-align: justify;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: rgb(15, 15, 95);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1,2rem;
+    margin: 2rem;
+}
+
+h3 {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    margin: 20px 0;
+}
+
+table {
+    border: 2px solid #444;
+    border-collapse: collapse;
+    margin: 2rem;
+}
+
+th {
+    background-color: #ddd;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+td {
+    background: ghostwhite;
+    text-align: center;
+    padding: 1rem;
+}
+
+input[textarea] {
+    background-color: #ddd;
+    border: 6px solid #0bb;
+}
+
+.button {
+    background-color: #0bb;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    box-sizing: content-box;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0 #0007;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.lista-de-navegacion {
+    box-sizing: border-box;
+    background-color: #ddd;
+    width: 90%;
+    border-left: 2px solid #444;
+    border-radius: 0 8px 8px 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+ul {
+    line-height: 1.4rem;
+}
