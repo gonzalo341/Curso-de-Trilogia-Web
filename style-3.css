@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 6px;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #1c468e;
+}
+
+.header-links,
+.header-nav,
+.footer-nav {
+    display: block;
+    color: #c4e9f5;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.header-buttons-div {
+    display: flex;
+    box-sizing: border-box;
+    left: 0;
+}
+
+.section-2,
+.section-3 {
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    width: 90%;
+}
+
+.Walt_Disney_World_logo_inicio {
+    box-sizing: border-box;
+    width: 156px;
+    height: 32px;
+}
+
+.link {
+    background-color: transparent;
+    border: 0;
+    color: #c4e9f5;
+    text-decoration: none;
+    padding: 4px;
+    margin: 4px;
+}
+
+.link:hover {
+    background-color: transparent;
+    border: 0;
+    color: #566e75;
+    text-decoration: underline;
+}
+
+.create-account-button {
+    background: none;
+}
+
+.header-button {
+    width: 15px;
+    height: 15px;
+}
+
+/* Estilos para el menú */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #0003;
+    z-index: 1;
+}
+
+/*Abrir el menu al pasar el mouse*/
+.dropdown:hover .dropdown-content {
+    display: block;
+    left: 0;
+}
+
+/*Menu desplegado*/
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Section */
+.social-media-logo {
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    margin: 6px;
+}
