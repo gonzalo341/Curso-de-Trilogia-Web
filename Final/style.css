@@ -18,7 +18,7 @@ a:hover {
 
 /* Estilo del header */
 header {
-    background-color: #003366;
+    background-color: #1c468e;
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -193,13 +193,14 @@ header {
 }
 
 /* Sección de selección de tickets */
+
 .ticket-selection {
     background-color: white;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+    position: static;
     padding: 20px;
-    margin: 20px;
+    margin: 10px auto;
+    width: 90%; /* Para pantallas más pequeñas */
+    max-width: 500px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 500px;
