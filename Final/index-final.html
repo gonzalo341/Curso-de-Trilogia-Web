@@ -6,36 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walt Disney World Resort near Orlando, Florida – Official Site</title>
     <link rel="icon" type="image/x-icon" href="/icon/Disney.ico">
-    <link rel="stylesheet" href="style-final.css">
+    <link rel="stylesheet" href="style-3.css">
 </head>
 
 <body>
     <header>
-        <div class="header-links">
-            <div>
-                <a class="link" href="https://www.disneylatino.com/">Visita Disney.com</a>
-            </div>
-            <div>
-                <button class="button-link">Ingresa o Crear una Cuenta</button>
-            </div>
-            <div class="language-selection">
-                <img src="/icon/global-languages.svg" alt="Seleccionar idioma">
-                <button class="button-link">Argentina (Español)</button>
-            </div>
-            <div class="search-bar">
-                <form action="/search" method="GET">
-                    <img src="/icon/lupa.png" alt="Buscar">
-                    <input type="text" name="search-box" placeholder="Buscar en disneyworld.com">
-                    <button type="submit">Buscar</button>
-                </form>
+        <!-- Enlace al sitio oficial de Disney -->
+        <div class="header-link">
+            <a class="link" href="https://www.disneylatino.com/">Visita Disney.com</a>
+            <div class="header-buttons-div">
+                <!-- Botón para ingresar o crear cuenta -->
+                <button class="header-button">Ingresa o Crear una Cuenta</button>
+                <!-- Selección de idioma -->
+                <div class="language-selection">
+                    <img src="/icon/global-languages.svg" alt="Seleccionar idioma">
+                    <button class="button-link">Argentina (Español)</button>
+                    <div class="dropdown-content">
+                        <a href="#">Inglés</a>
+                        <a href="#">Español</a>
+                    </div>
+                </div>
+                <!-- Barra de búsqueda -->
+                <div class="search-bar">
+                    <form action="/search" method="GET">
+                        <img class="header-button" src="/icon/lupa.png" alt="Ícono de búsqueda">
+                        <input type="text" name="search-box" placeholder="Buscar en disneyworld.com">
+                        <button type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="menu">
-            <img class="Walt_Disney_World_logo_inicio" src="icon/wdw.svg" alt="Walt Disney World logo">
 
-            <!-- Menu desplegable "Tickets y Parques" -->
+        <!-- Navegación principal -->
+        <div class="header-nav">
+            <!-- Logo de Walt Disney World -->
+            <a href="https://disneyworld.disney.go.com/es-ar/">
+                <img class="Walt_Disney_World_logo_inicio" src="icon/wdw.svg" alt="Walt Disney World logo">
+            </a>
+            <!-- Menú desplegable: Tickets y Pases -->
             <div class="dropdown">
-                <button class="dropbtn, links">Tickets y Pases</button>
+                <button class="dropbtn, link">Tickets y Pases</button>
                 <div class="dropdown-content">
                     <h3>Tickets y pases</h3>
                     <a href="#">Comprar tickets para parques temáticos</a>
@@ -53,9 +63,9 @@
                 </div>
             </div>
 
-            <!-- Menu desplegable "Hoteles" -->
+            <!-- Menú desplegable: Hoteles -->
             <div class="dropdown">
-                <button class="dropbtn, links">Hoteles</button>
+                <button class="dropbtn, link">Hoteles</button>
                 <div class="dropdown-content">
                     <a href="#">Villas de Lujo</a>
                     <a href="#">Hoteles de Lujo</a>
@@ -67,9 +77,9 @@
                 </div>
             </div>
 
-            <!-- Menu desplegable "Cosas para hacer" -->
+            <!-- Menú desplegable: Cosas para hacer -->
             <div class="dropdown">
-                <button class="dropbtn, links">Cosas para hacer</button>
+                <button class="dropbtn, link">Cosas para hacer</button>
                 <div class="dropdown-content">
                     <a href="#">Atracciones</a>
                     <a href="#">Restaurantes</a>
@@ -77,9 +87,9 @@
                 </div>
             </div>
 
-            <!-- Menu desplegable "Ayuda y Reglas" -->
+            <!-- Menú desplegable: Ayuda y Reglas -->
             <div class="dropdown">
-                <button class="dropbtn, links">Ayuda y Reglas</button>
+                <button class="dropbtn, link">Ayuda y Reglas</button>
                 <div class="dropdown-content">
                     <a href="#">Preguntas Frecuentes</a>
                     <a href="#">Reglas del Parque</a>
@@ -90,133 +100,148 @@
     </header>
 
     <main>
-        <div class="ticket-selection">
-            <label for="tipo_de_ticket">
-                <h4>Tipo de Ticket</h4>
-            </label>
-            <details>
-                <summary>Ticket por 1 día</summary>
-                <summary>Ticket por 2 días</summary>
-                <summary>Ticket por 3 días</summary>
-                <summary>Ticket por 4 días</summary>
-                <summary>Ticket por 5 días</summary>
-                <summary>Ticket por 6 días</summary>
-            </details>
-        </div>
+        <!-- Selección de tickets y video promocional -->
         <section class="magical-intro">
-            <h1>The Most Magical On Earth</h1>
-            <div class="magical-links">
-                <a href="#">Mira el Video Completo</a>
-                <a href="#">Learn More</a>
+            <div class="ticket-selection">
+                <!-- Selección del tipo de ticket -->
+                <label for="tipo_de_ticket">
+                    <h4>Tipo de Ticket</h4>
+                </label>
+                <select id="tipo_de_ticket">
+                    <option value="1">Ticket por 1 día</option>
+                    <option value="2">Ticket por 2 días</option>
+                    <option value="3">Ticket por 3 días</option>
+                </select>
+                <!-- Selector de cantidad de adultos -->
+                <div class="quantity-selector">
+                    <label>Adultos</label>
+                    <button>-</button>
+                    <input type="number" value="1" min="0">
+                    <button>+</button>
+                </div>
+                <!-- Selector de cantidad de niños -->
+                <div class="quantity-selector">
+                    <label>Niños</label>
+                    <button>-</button>
+                    <input type="number" value="0" min="0">
+                    <button>+</button>
+                </div>
+                <!-- Botón para enviar selección de tickets -->
+                <button class="submit-button">Enviar</button>
+            </div>
+
+            <!-- Video promocional del parque -->
+            <video class="magical-video" autoplay muted loop>
+                <source src="video/What’s A Walt Disney World Thrill Feel Like_.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <!-- Contenido promocional mágico -->
+            <div class="magical-content">
+                <h1>The Most Magical On Earth</h1>
+                <div class="magical-link">
+                    <a href="#">Learn More</a>
+                    <a href="#">Get Tickets</a>
+                </div>
             </div>
         </section>
-        <section class="offers">
+
+        <section class="section_2">
             <h2>Comienza a Planificar: Oferta y Más</h2>
-            <div class="section">
-                <div class="section_1">
-                    <div class="offer-image">
-                        <img src="/img/montaña rusa - 16x9.webp" alt="Montaña Rusa" type="image/webp">
-                    </div>
-                    <div class="offer-image">
-                        <img src="/img/Goofy-1x1.avif" alt="Goofy jugando" type="image/avif">
-                    </div>
+            <div class="offers">
+                <!-- Fila superior -->
+                <div class="offers-top-left"></div>
+                <div class="offers-top-right"></div>
+
+                <!-- Fila inferior -->
+                <div class="offers-bottom-left">
+                    <h3>Magic Ticket de 4 Días, 4 Parques desde $119 por Día, Más Impuestos</h3>
+                    <p>
+                        Disfruta 4 días de diversión en los Parques Temáticos a principios de 2025 con un Magic Ticket
+                        de 4 días, 4 Parques. Desde $119 USD por día, más impuestos (precio total desde $476 USD más
+                        impuestos).
+                    </p>
+                    <button class="details-button">Obtener Detalles</button>
+                    <button class="offers-button">Ver Todas las Ofertas</button>
                 </div>
-                <div class="section_2">
-                    <div class="offer-details">
-                        <h3>Magic Ticket de 4 Días, 4 Parques desde $119 por Día, Más Impuestos</h3>
-                        <p>
-                            Disfruta 4 días de diversión en los Parques Temáticos a principios de 2025 con un Magic
-                            Ticket
-                            de 4 días, 4 Parques. Desde $119 USD por día, más impuestos (precio total desde $476 USD más
-                            impuestos).
-                        </p>
-                        <button class="details-button">Obtener Detalles</button>
-                        <button class="offers-button">Ver Todas las Ofertas</button>
-                    </div>
-                    <div class="offer-image">
-                        <img src="/img/Familia-1x1.jpg" alt="Familia comiendo helado" type="image/jpg">
-                    </div>
-                    <div class="offer-details">
-                        <h3>Ahorra en habitaciones en los hoteles Resort de Disney selectos</h3>
-                        <p>
-                            Oferta válida en estadías en noches de domingo a jueves del 1 de enero al 20 de febrero de
-                            2025,
-                            y en estadías del 23 de febrero al 30 de abril de 2025 (sujeto a disponibilidad).
-                        </p>
-                        <a class="details-link" href="#">Obtener Detalles</a>
-                    </div>
+
+                <div class="offers-bottom-center"></div>
+
+                <div class="offers-bottom-right">
+                    <h3>Ahorra en habitaciones en los hoteles Resort de Disney selectos</h3>
+                    <p>
+                        Oferta válida en estadías en noches de domingo a jueves del 1 de enero al 20 de febrero de 2025,
+                        y en estadías del 23 de febrero al 30 de abril de 2025 (sujeto a disponibilidad).
+                    </p>
+                    <a class="details-link" href="#">Obtener Detalles</a>
                 </div>
             </div>
         </section>
-        <section class="experiences">
+
+
+        <section class="section-3">
             <h2>Experiencias que no puedes perderte</h2>
-            <div class="experiences-gallery">
-                <img class="experience-image" src="/img/MK17-HappilyEverAfter0507-263_1-16x9.avif"
-                    alt="Castillo de Disney">
-            </div>
-            <div class="experience-details">
-                <div class="experience-item">
+            <div class="grid-container">
+                <!-- Imagen superior -->
+                <div class="experiences-image top-image">
+                    <h4>Happily Ever After</h4>
+                </div>
+                <!-- Imágenes inferiores -->
+                <div class="experiences-image bottom-left-image">
                     <h4>Guardians of the Galaxy: Cosmic Rewind</h4>
-                    <img src="/img/Guardianes de la Galaxia-1x1.webp" alt="Guardianes de la Galaxia" type="image/webp">
                 </div>
-                <div class="experience-item">
+                <div class="experiences-image bottom-center-image">
                     <h4>Mickey & Minnie's Runaway Railway</h4>
-                    <img src="/img/mickey-minnie-runaway-1x1.jpg" alt="Mickey and Minnie Runaway" type="image/jpg">
                 </div>
-                <div class="experience-item">
+                <div class="experiences-image bottom-right-image">
                     <h4>Festival of the Lion King en Disney's Animal Kingdom Theme Park</h4>
-                    <img src="/img/festival-of-the-lion-king-1x1.avif" alt="Festival of the Lion King"
-                        type="image/avif">
                 </div>
             </div>
         </section>
 
-        <!-- Publicidad de Disney+ -->
-        <aside>
-            <img class="disney-plus-ad" src="/img/Disney+.jpg" alt="Catálogo de Disney+" type="image/jpg">
-        </aside>
 
-        <section class="reservations">
+        <!-- Secciones adicionales -->
+        <section class="section_4">
+            <aside class="disney-plus-ad"></aside>
+        </section>
 
+        <section class="section_5">
+            <!-- Detalles para reservación en Disney Park Pass -->
             <div class="reservation-details">
                 <h3>Haz una Reservación con Disney Park Pass</h3>
                 <p>Si tienes un ticket válido para el Parque, ¡puedes usar el sistema Disney Park Pass para hacer una
                     Reservación para el Parque!</p>
                 <a class="link" href="#">Realizar una reserva</a>
-                <img class="reservation-image" src="/img/icn-kbyg-calendar-illustrated.avif" alt="Calendario"
-                    type="avif">
+                <img class="reservation-image" src="/img/icn-kbyg-calendar-illustrated.avif" alt="Calendario">
             </div>
-
+            <!-- Información sobre operadores turísticos -->
             <div class="tour-operators">
                 <h3>Operadores turísticos</h3>
                 <p>Los siguientes operadores turísticos pueden ayudarte con la reservación de paquetes, planes de
                     comidas y
                     transporte de Walt Disney World Resort, y mucho más.</p>
                 <a class="link" href="#">Ver detalles</a>
-                <img class="tour-image" src="/img/_icn_Explore-1200.avif" alt="Binoculares" type="avif">
+                <img class="tour-image" src="/img/_icn_Explore-1200.avif" alt="Binoculares">
             </div>
-
+            <!-- Detalles sobre Disney Genie -->
             <div class="genie-details">
                 <h3>Una manera estupenda de disfrutar tu día en Disney</h3>
-                <img class="genie-image" src="/img/genie_homePageTile.avif" alt="Genio" type="avif">
             </div>
+        </section>
 
+        <!-- Información adicional para visitantes -->
+        <section class="section_6">
+            <p>Para obtener asistencia con tu visita a Walt Disney World, llama al (011) 5354-8119.</p>
+            <p>¿Compraste tickets para un Parque y necesitas cancelar?</p>
+            <p>Si la compra se hizo en, o antes de 14 días, <span><a href="#">visita "Mis Planes"</a></span>.</p>
+            <p>Los Visitantes menores de 18 años de edad deben contar con el permiso de sus padres o tutores para
+                llamar.</p>
         </section>
     </main>
 
     <hr>
 
-    <section>
-        <p>Para obtener asistencia con tu visita a Walt Disney World, llama al (011) 5354-8119.</p>
-        <p>¿Compraste tickets para un Parque y necesitas cancelar?</p>
-        <p>Si la compra se hizo en, o antes de 14 días, <span><a href="#">visita "Mis Planes"</a></span>.</p>
-        <p>Los Visitantes menores de 18 años de edad deben contar con el permiso de sus padres o tutores para llamar.
-        </p>
-    </section>
-
-    <hr>
-
-    <section>
+    <section class="section_7">
         <div>
             <ul>
                 <li>
@@ -281,8 +306,6 @@
                 <li><a href="#">Privacidad y Legalidad</a></li>
                 <li><a href="#">Ayuda del Sitio Web</a></li>
 
-                <br>
-
                 <li>
                     <h4>Obtén Información Sobre</h4>
                 </li>
@@ -308,13 +331,13 @@
         </div>
     </section>
 
-    <section>
-        <div>
+    <section class="section_8">
+        <div class="social-media">
             <h4>Mantente Conectado</h4>
             <img class="social-media-logo" src="icon/facebook.svg" alt="Logo de Facebook" type="image/svg">
             <img class="social-media-logo" src="icon/instagram.svg" alt="Logo de Instagram" type="image/svg">
         </div>
-        <div>
+        <div class="account">
             <h4>Crea una cuenta de Disney</h4>
             <p>
                 ¡Regístrate para recibir las últimas noticias sobre los Parques de Disney y ofertas especiales!
@@ -326,15 +349,15 @@
     <footer>
         <div>
             <ul class="footer-nav">
-                <li><a  class="links" href="#">Ayuda y Servicios para Huéspedes</a></li>
-                <li><a  class="links" href="#">Mapa del Sitio</a></li>
-                <li><a  class="links" href="#">Términos de Uso</a></li>
-                <li><a  class="links" href="#">Avisos Legales</a></li>
-                <li><a  class="links" href="#">Política de Privacidad</a></li>
-                <li><a  class="links" href="#">No Vender Mi Información</a></li>
-                <li><a  class="links" href="#">Política de Privacidad En Línea para Niños</a></li>
-                <li><a  class="links" href="#">Sus Derechos de Privacidad en California</a></li>
-                <li><a  class="links" href="#">Anuncios Basados en Interés</a></li>
+                <li><a class="link" href="#">Ayuda y Servicios para Huéspedes</a></li>
+                <li><a class="link" href="#">Mapa del Sitio</a></li>
+                <li><a class="link" href="#">Términos de Uso</a></li>
+                <li><a class="link" href="#">Avisos Legales</a></li>
+                <li><a class="link" href="#">Política de Privacidad</a></li>
+                <li><a class="link" href="#">No Vender Mi Información</a></li>
+                <li><a class="link" href="#">Política de Privacidad En Línea para Niños</a></li>
+                <li><a class="link" href="#">Sus Derechos de Privacidad en California</a></li>
+                <li><a class="link" href="#">Anuncios Basados en Interés</a></li>
             </ul>
         </div>
         <div class="footer-contact">
